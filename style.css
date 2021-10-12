@@ -1,4 +1,37 @@
-h1 {
+.container {
+  padding: 40px 25px 40px;
+}
+.card {
+  border-radius: 20px;
   text-align: center;
-  color: red;
+}
+
+.location-label {
+  opacity: 55%;
+}
+h1 {
+  color: #4ac3be;
+}
+.current-country {
+  color: #4ac3be;
+}
+
+.location-temperature {
+  font-size: 70px;
+  color: #4ac3be;
+}
+
+.display-weather {
+  display: block;
+  text-align: center;
+  padding: 20px 125px 20px;
+}
+img {
+  display: block;
+  max-width: 50%;
+  margin: 0 auto;
+}
+
+.panel-heading {
+  text-align: left;
 }
