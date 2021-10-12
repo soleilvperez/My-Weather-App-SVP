@@ -35,3 +35,7 @@ img {
 .panel-heading {
   text-align: left;
 }
+
+.footer {
+  font-size: smaller;
+}
