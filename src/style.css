@@ -1,6 +1,9 @@
 .container {
+  max-width: 600px;
   padding: 40px 25px 40px;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
 }
+
 .card {
   border-radius: 20px;
   text-align: center;
@@ -8,6 +11,7 @@
 
 .location-label {
   opacity: 55%;
+  font-size: 13px;
 }
 h1 {
   color: #4ac3be;
@@ -26,10 +30,19 @@ h1 {
   text-align: center;
   padding: 20px 125px 20px;
 }
+
+.time-display {
+  font-size: 13px;
+}
+
 img {
   display: block;
   max-width: 50%;
   margin: 0 auto;
+}
+
+.col-6 {
+  font-size: small;
 }
 
 .panel-heading {
