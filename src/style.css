@@ -1,5 +1,6 @@
 .container {
   max-width: 700px;
+  min-width: 700px;
   padding: 40px 25px 40px;
   font-family: Verdana, Geneva, Tahoma, sans-serif;
 }
@@ -20,6 +21,10 @@ h1 {
   color: #4ac3be;
 }
 
+.search-form {
+  padding-top: 18px;
+}
+
 .search-button {
   background: #cf6e48;
   border-radius: 10px;
@@ -34,18 +39,6 @@ h1 {
 
 hr {
   margin: 5px;
-}
-
-.location-button {
-  background: #cf6e48;
-  border-radius: 10px;
-  box-shadow: 0px 2px 2px black;
-  font-weight: 700;
-  font-size: 12px;
-  margin: 2px;
-  padding: 5px 10px 5px;
-  border: none;
-  height: 34px;
 }
 
 .location-temperature {

@@ -1,8 +1,5 @@
-//Button to search for Current Location Temp//
-
 //Searching for a city in Search Bar and getting it to appear in h1//
 function cityTemp(response) {
-  console.log(response.data);
   document.querySelector("#current-city").innerHTML = `📍${response.data.name}`;
   document.querySelector("#location-temperature").innerHTML = Math.round(
     response.data.main.temp
