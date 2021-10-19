@@ -69,9 +69,9 @@ hr {
   font-size: 13px;
 }
 
-img {
+.icon {
   display: block;
-  max-width: 50%;
+  block-size: 175px;
   margin: 0 auto;
 }
 
