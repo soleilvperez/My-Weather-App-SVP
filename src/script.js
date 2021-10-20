@@ -1,8 +1,9 @@
-//Searching for a city in Search Bar and getting it to appear in h1//
 function cityTemp(response) {
+  fahrenheitTemperature = response.data.main.temp;
+
   document.querySelector("#current-city").innerHTML = `📍${response.data.name}`;
   document.querySelector("#location-temperature").innerHTML = Math.round(
-    response.data.main.temp
+    fahrenheitTemperature
   );
   document.querySelector("#humidity").innerHTML = response.data.main.humidity;
   document.querySelector("#wind").innerHTML = Math.round(
@@ -27,15 +28,6 @@ function search(event) {
 
   axios.get(apiUrl).then(cityTemp);
 }
-
-let searchForm = document.querySelector("#search-form");
-searchForm.addEventListener("submit", search);
-
-//END- Searching for a city in Search Bar and getting it to appear in h1//
-
-//Time element in center of page//
-let timeElement = document.querySelector("#time-display");
-let timedate = new Date();
 
 function formatDate(date) {
   let hours = date.getHours();
@@ -70,5 +62,23 @@ function formatDate(date) {
   return `${hours}:${minutes} ⎪ ${day}, ${month} ${dates}`;
 }
 
+let timeElement = document.querySelector("#time-display");
+let timedate = new Date();
+
 timeElement.innerHTML = formatDate(timedate);
-//END- Time element in center of page//
+
+function displayCelsiusTemperature(event) {
+  event.preventDefault();
+  let cityTemp = document.querySelector("#location-temperature");
+  let celsiusTemperature = (fahrenheitTemperature - 32) * (5 / 9);
+
+  cityTemp.innerHTML = Math.round(celsiusTemperature);
+}
+
+let fahrenheitTemperature = null;
+
+let searchForm = document.querySelector("#search-form");
+searchForm.addEventListener("submit", search);
+
+let celsiusLink = document.querySelector("#celsius-link");
+celsiusLink.addEventListener("click", displayCelsiusTemperature);
