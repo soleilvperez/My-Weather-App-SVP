@@ -86,9 +86,33 @@ a {
 }
 
 .panel-heading {
+  display: block;
+  margin: 10px 10px 10px;
+  border-radius: 10px;
   text-align: left;
 }
 
+.forecast-date {
+  color: chocolate;
+}
+
+.forecast-icon {
+  display: block;
+  font-size: 50px;
+  margin-bottom: 10px;
+}
+
+.forecast-temperature-max {
+  font-size: small;
+}
+
+.forecast-temperature-min {
+  font-size: small;
+  color: red;
+  opacity: 0.5;
+}
+
 .footer {
+  display: block;
   font-size: smaller;
 }
