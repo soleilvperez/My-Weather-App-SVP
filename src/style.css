@@ -48,21 +48,16 @@ hr {
 
 a {
   text-decoration: none;
-  color: black;
+  color: #6492ef;
   cursor: default;
 }
 
 .units {
   position: relative;
   top: -35px;
-  text-align: center;
-}
-
-.units .active {
   color: #4ac3be;
   font-size: large;
   font-weight: bolder;
-  text-decoration: none;
 }
 
 .display-weather {
