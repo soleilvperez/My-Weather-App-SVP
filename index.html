@@ -22,7 +22,7 @@
           <div class="row">
             <div class="col-6">
               <div class="location-label">Your Location</div>
-              <h1 id="current-city">📍 New York</h1>
+              <h1 id="current-city">New York</h1>
             </div>
 
             <div class="col-6">
@@ -36,7 +36,7 @@
                     class="city-input"
                     id="city-input"
                   />
-                  <input type="submit" value="Search" class="search-button" />
+                  <button class="bth btn-default search-button" type="submit"/>Search</button>
                 </form>
               </div>
             </div>
@@ -50,18 +50,28 @@
               <small class="units" id="units"> ℉ </small>
             </div>
 
-            <p id="weather-description">Mostly Sunny</p>
+            <p id="weather-description" class="weather-description">
+              Mostly Sunny
+            </p>
             <p class="time-display" id="time-display">4:10 pm ⎜Mon Aug 9</p>
             <img src="images/sunny.png" class="icon" id="icon" />
             <div class="row">
               <div class="col-6">
-                <span class="humidity" id="humidity">0</span>%<br />Humidity
+                <span class="humidity" id="humidity">0</span><br /><span
+                  class="humidity-label"
+                  >Humidity</span
+                >
               </div>
-              <div class="col-6"><span id="wind">0</span> mph<br />Wind</div>
+              <div class="col-6">
+                <span id="wind" class="wind">0</span><br /><span
+                  class="wind-label"
+                  >Wind</span
+                >
+              </div>
             </div>
           </div>
 
-          <div class="panel-heading">A look ahead!</div>
+          <div><span class="panel-heading">A LOOK AHEAD</span></div>
           <div class="weather-forecast" id="weather-forecast"></div>
         </div>
       </div>

@@ -59,7 +59,7 @@ function displayForecast(response) {
                     forecastDay.weather[0].icon
                   }@2x.png"
                   alt=""
-                  width="42"
+                  width="68"
                 />
                 <div class="weather-forecast-temperatures">
                   <span class="forecast-temperature-max">${Math.round(
@@ -81,7 +81,6 @@ function getForecast(coordinates) {
   let apiKey = "667d9f573c8af4c33457be5d561a9148";
   let apiUrl = `https://api.openweathermap.org/data/2.5/onecall?lat=${coordinates.lat}&lon=${coordinates.lon}&appid=${apiKey}&units=imperial`;
 
-  console.log(apiUrl);
   axios.get(apiUrl).then(displayForecast);
 }
 
@@ -92,10 +91,12 @@ function cityTemp(response) {
   document.querySelector("#location-temperature").innerHTML = Math.round(
     fahrenheitTemperature
   );
-  document.querySelector("#humidity").innerHTML = response.data.main.humidity;
-  document.querySelector("#wind").innerHTML = Math.round(
+  document.querySelector(
+    "#humidity"
+  ).innerHTML = `${response.data.main.humidity}%`;
+  document.querySelector("#wind").innerHTML = `${Math.round(
     response.data.wind.speed
-  );
+  )} mph`;
 
   document.querySelector("#weather-description").innerHTML =
     response.data.weather[0].main;
@@ -121,6 +122,7 @@ function handleSubmit(event) {
   let city = document.querySelector("#city-input").value;
   searchCity(city);
 }
+
 let searchForm = document.querySelector("#search-form");
 searchForm.addEventListener("submit", handleSubmit);
 
@@ -129,4 +131,4 @@ let timedate = new Date();
 
 timeElement.innerHTML = formatDate(timedate);
 
-searchCity("Honolulu");
+searchCity("Brooklyn");
